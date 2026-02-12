@@ -3,7 +3,7 @@ name: Build and Push to GCP Artifact Registry
 on:
   push:
     branches:
-      - main
+      - Main
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
