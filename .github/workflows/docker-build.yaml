@@ -19,6 +19,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npx eslint . || echo "Linting failed, but continuing with the build and push process."
+
+      - name: Run tests
+        run: npm test || echo "Tests failed, but continuing with the build and push process."
+      
+      - name: Run npm audit
+        run: npm audit --audit-level high || echo "Vulnerabilities found, but continuing with the build and push process."
+
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
