@@ -3,7 +3,7 @@ name: Build and Push to GCP Artifact Registry
 on:
   push:
     branches:
-      - Main
+      - main
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
@@ -37,7 +37,7 @@ jobs:
             -t "${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}" \
             .
 
-      - name: Push Docker image (commit tag)
+      - name: Push Docker image (commit SHA)
         run: |
           docker push "${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}"
 
