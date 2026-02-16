@@ -46,12 +46,12 @@ jobs:
       - name: Terraform Plan
         working-directory: ./
         env:
-          var.project_id: ${{ secrets.GCP_PROJECT_ID }}
-          var.region: ${{ secrets.GCP_REGION }}
-          var.credentials: ${{ secrets.CREDENTIALS }}
-          var.image: ${{ secrets.IMAGE_NAME }}
-          var.service_account_email: "${{ secrets.GCP_SA_EMAIL }}"
-          var.service_name: "${{ secrets.SERVICE_NAME }}"
+          TF_var.project_id: ${{ secrets.GCP_PROJECT_ID }}
+          TF_var.region: ${{ secrets.GCP_REGION }}
+          TF_var.credentials: ${{ secrets.CREDENTIALS }}
+          TF_var.image: ${{ secrets.IMAGE_NAME }}
+          TF_var.service_account_email: "${{ secrets.GCP_SA_EMAIL }}"
+          TF_var.service_name: "${{ secrets.SERVICE_NAME }}"
         run: terraform plan -out=tfplan
         
 
