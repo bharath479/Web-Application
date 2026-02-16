@@ -43,7 +43,7 @@ resource "google_cloud_run_v2_service" "app" {
   }
 
   depends_on = [
-    google_project_service.run_api,
+    google_project_service.cloudrun_api,
     google_project_service.artifact_api
   ]
 }
