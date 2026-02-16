@@ -1,6 +1,0 @@
-project_id = "glass-ally-479415-q8"
-region = "us-central1"
-service_name = "my-cloud-run-service"
-credentials = "C:\\Users\\BharathSaiDadi\\TerraForm\\glass-ally-479415-q8-4a3b829198cf.json"
-service_account_email = "github-actions-sa@glass-ally-479415-q8.iam.gserviceaccount.com"
-image = "us-central1-docker.pkg.dev/glass-ally-479415-q8/docker-repo/sample-webapp@sha256:7e4aabcecdf6d3cae4064d58d93ca40c4299721e23f492c9bc0cd6afc1ca13aa"
