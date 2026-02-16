@@ -48,6 +48,8 @@ jobs:
           TF_VAR_project_id: ${{ secrets.GCP_PROJECT_ID }}
           TF_VAR_region: ${{ secrets.GCP_REGION }}
           TF_VAR_credentials: ${{ secrets.GCP_SA_KEY }}
+          TF_VAR_IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
+          TF_VAR_IMAGE_TAG: ${{ secrets.IMAGE_TAG }}
         run: terraform plan -out=tfplan
         
 
