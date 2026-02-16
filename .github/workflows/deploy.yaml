@@ -35,19 +35,19 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        working-directory: ./terraform
+        working-directory: ./cloudrun.tf
         run: terraform init
 
       - name: Terraform Validate
-        working-directory: ./terraform
+        working-directory: ./cloudrun.tf
         run: terraform validate
 
       - name: Terraform Plan
-        working-directory: ./terraform
+        working-directory: ./cloudrun.tf
         run: terraform plan -out=tfplan
 
       - name: Terraform Apply
-        working-directory: ./terraform
+        working-directory: ./cloudrun.tf
         run: terraform apply -auto-approve tfplan
 
       - name: Deploy to Cloud Run
