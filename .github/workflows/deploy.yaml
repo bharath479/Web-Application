@@ -50,7 +50,7 @@ jobs:
           TF_VAR_credentials: ${{ secrets.GCP_SA_KEY }}
           TF_VAR_image: "us-central1-docker.pkg.dev/glass-ally-479415-q8/docker-repo/sample-webapp@sha256:7e4aabcecdf6d3cae4064d58d93ca40c4299721e23f492c9bc0cd6afc1ca13aa"
           TF_VAR_service_account_email: "github-actions-sa@glass-ally-479415-q8.iam.gserviceaccount.com"
-          TF_VAR_service_name: "my-cloud-run-service"
+          TF_VAR_service_name: "my-cloud-run-service1"
         run: terraform plan -out=tfplan
         
 
