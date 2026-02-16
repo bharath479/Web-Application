@@ -8,8 +8,14 @@ data "google_service_account" "service-account" {
     account_id = var.service_account_email
 }
 
-resource "google_project_service" "run_api" {
+resource "google_project_service" "artifact_api" {
+  service            = "artifactregistry.googleapis.com"
+  disable_on_destroy = false
+}
+
+resource "google_project_service" "cloudrun_api" {
   service = "run.googleapis.com"
+  disable_on_destroy = false
 }
 
 resource "google_cloud_run_v2_service" "app" {
