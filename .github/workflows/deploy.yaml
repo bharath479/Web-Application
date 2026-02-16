@@ -47,7 +47,7 @@ jobs:
         env:
           var.project_id: ${{ secrets.GCP_PROJECT_ID }}
           var.region: ${{ secrets.GCP_REGION }}
-          var.credentials: ${{ secrets.GCP_SA_KEY }}
+          var.credentials: ${{ secrets.CREDENTIALS }}
           var.image: ${{ secrets.IMAGE_NAME }}
           var.service_account_email: "${{ secrets.GCP_SA_EMAIL }}"
           var.service_name: "${{ secrets.SERVICE_NAME }}"
